@@ -1,0 +1,438 @@
+html, body, h1, h2, h3, h4, h5, h6, p, a {
+   /*margin: 0 auto;*/
+   padding: 0;
+   font-family: 'Ubuntu', sans-serif;
+}
+
+/** {
+  border: 1px solid red;
+}*/
+
+/***************************          Navbar          ***************************/
+.navbar {
+   background-color: white;
+   width: 100%;
+   height: auto;
+}
+
+.navbar-left span {
+  color: #49C6E3;
+}
+
+.navbar-nav li a {
+  line-height: 75px;
+  padding: 0px 15px;
+  margin-right: 25px;
+}
+
+#logo {
+  width: 10%;
+  vertical-align: center;
+  padding: 20px;
+  display: none;
+}
+
+#logo li a {
+  display: inline-block;
+  max-width: 20%
+}
+
+/***************************          Jumbotron          ***************************/
+.jumbotron {
+  width: 100%;
+  height: 100%;
+  background: url("/images/bike_1BW.jpg") no-repeat center center fixed;
+  background-size:cover;
+}
+
+.banner h2 {
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  font-size: 5vw;
+  position: absolute;
+  margin: 15% 33%;
+  color: #49C6E3;
+  padding: 0.35em 1em;
+}
+
+.banner h2:before, .banner h2:after {
+  transition: width 0.85s ease;
+  transition-delay: 0.25s;
+  background: white;
+  content: '';
+  height: 3px;
+  position: absolute;
+  width: 100%;
+}
+
+.banner h2:before {
+  top: 0;
+  left: 0;
+}
+
+.banner h2:after {
+  bottom: 0;
+  right: 0;
+}
+
+body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+  animation: none !important;
+  transition: none !important;
+}
+
+body.is-loading .banner h2:before, body.is-loading .banner h2:after {
+  width: 0;
+}
+
+body.is-loading .banner:after {
+  opacity: 1;
+}
+
+/***************************          HEADERS          ***************************/
+.headerIntro, .createIntro, .exploreIntro, .discoverIntro {
+   width: 100%;
+   height: auto;
+   background-color: white;
+   padding: 30px 0px;
+}
+
+.headerIntro h3, .createIntro h3, .exploreIntro h3, .discoverIntro h3 {
+   color: black;
+   font-size: 3em;
+   text-align: center;
+   padding: 0px;
+   margin: 0px;
+}
+
+.headerIntro p, .createIntro p, .exploreIntro p, .discoverIntro p {
+  text-align: center;
+  color: #666C73;
+  font-size: 1vw;
+}
+
+.headerIntro span, .createIntro span, .exploreIntro span, .discoverIntro span {
+    text-align: center;
+    color: #49C6E3;
+    font-size: 6vw;
+    font-weight: 200;
+    padding: 0px;
+    margin: 0px;
+}
+
+.introFade {
+  -webkit-animation-duration: 2s;
+  /*-webkit-animation-delay: 2s;*/
+  /*-webkit-animation-iteration-count: infinite;*/
+}
+
+/***************************          How It Works          ***************************/
+.howBody {
+   width: 100%;
+   height: 200px;
+   background-color: white;
+   margin: 0 auto;
+}
+
+.howBody h3 {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.howBody p {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.howBody span {
+  font-weight: bold;
+  color: #49C6E3;
+  font-size: 2vw;
+}
+
+/***************************          Create          ***************************/
+.create {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5vw;
+}
+
+.createItems {
+  height: 300px;
+  max-height: 300px;
+  overflow: scroll;
+}
+
+.createItems td {
+  font-size: .75vw;
+}
+
+.nav-pills {
+   margin: 1vw auto;
+}
+
+.nav-pills a {
+    background: #49C6E3;
+    margin-right: 0.5vw;
+    border: none;
+    color: white;
+}
+
+.nav-pills a:hover {
+    color: #49C6E3;
+}
+
+.addItem, .displayCount, .shareItem {
+  padding: 25px 0px;
+  text-align: center;
+}
+
+.shareItem a {
+   color: inherit;
+   margin: 0px 7.5px;
+   text-decoration: none;
+}
+
+.shareItem a:hover {
+   color: #49C6E3;
+}
+
+.shareItem span {
+  color: #49C6E3;
+}
+
+#addButton {
+    background: #49C6E3;
+    border: none;
+}
+
+.addItem {
+    margin-top: 2vw;
+}
+
+.myList h3 {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.myList li {
+    margin-left: 30%;
+}
+
+#spanMyList {
+    color: #49C6E3;
+}
+
+.displayCount h3 span {
+  background-color: #49C6E3;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  top: -5px;
+  height: 22px;
+  width: 26px;
+  padding: 4px 0 0 0;
+}
+
+/***************************          Parallax          ***************************/
+.createParallax, .exploreParallax, .discoverParallax {
+   height: 600px;
+}
+
+.createParallaxBtm {
+  height: 100%;
+  background: url("/images/swim_1.jpg") no-repeat center center fixed;
+  background-size: 100% 100%;
+  margin: 0px;
+}
+
+.exploreParallaxBtm {
+  height: 100%;
+  background: url("/images/full_3.jpg") no-repeat center center fixed;
+  background-size: 100% 100%;
+  margin: 0px;
+}
+
+.discoverParallaxBtm {
+  height: 100%;
+  background: url("/images/full_6.jpg") no-repeat center center fixed;
+  background-size: 100% 100%;
+  margin: 0px;
+}
+
+
+/***************************          Explore          ***************************/
+/*****************          Explore: Display Images          *****************/
+.gallery-item {
+    height: auto;
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+}
+
+.gallery-item span {
+  color: #666C73;
+  font-size: 2vw;
+}
+
+hr {
+    border: 0;
+    width: 75%;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.imgTitle {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: none;
+    background-color: white;
+}
+
+.imgTitle h5 {
+    position: absolute;
+    color: #49C6E3;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+/*****************          Explore: Hidden Popout          *****************/
+.race_Lists span{
+  font-size: 1vw;
+  color: black;
+}
+
+#race_1, #race_2, #race_3, #race_4 {
+    height: 200px;
+    padding: 5vw 0;
+    display: none;
+}
+
+.sprintCounter, .olympicCounter, .halfCounter, .fullCounter, .triathlons1, .triathlons2, .triathlons3, .triathlons4 {
+   padding: 5vw 0;
+   text-align: center;
+}
+
+.sprintCounter h3, .olympicCounter h3, .halfCounter h3, .fullCounter h3{
+    margin: 0;
+}
+
+span.sprint1, span.sprint2, span.sprint3, span.olympic1, span.olympic2, span.olympic3, span.half1, span.half2, span.half3, span.full1, span.full2, span.full3 {
+    color: #49C6E3;
+    font-size: 2.5vw;
+}
+
+.triIcon {
+   width: 4vw;
+   height: auto;
+   margin: 0 2vw;
+   padding: 2vw 0;
+   opacity: 0.5;
+   text-align: center;
+   color: inverse;
+}
+
+.triIcon:hover {
+   opacity: 1;
+}
+
+.race_Lists h3 {
+  text-align: center;
+}
+
+.race_Lists h4 {
+    font-size: 2vw;
+  padding-top: 2vw;
+  text-align: left;
+  border-bottom: 4px solid #49C6E3;
+}
+
+.race_Lists p {
+  text-align: center;
+  color: #666C73;
+}
+
+.race_Lists p.amount {
+  text-align: right;
+}
+
+.race_Share {
+  text-align: center;
+}
+
+.race_Share a {
+ color: inherit;
+ margin: 0px 20px;
+ text-decoration: none;
+}
+
+.race_Share span {
+  color: #49C6E3;
+}
+
+.race_Share a:hover {
+   color: #49C6E3;
+}
+
+/***************************          Discover          ***************************/
+.discoverTri {
+    height: auto;
+    padding-bottom: 25px;
+}
+
+.topAthletes {
+    height: auto;
+}
+
+.topAthletes h1 {
+    margin-top: 7vw;
+    text-align: center;
+    margin: 0 auto
+    top: 50%;
+    left: 50%;
+}
+
+.topAthletes p {
+    text-align: center;
+}
+
+.triathlonFeed, .usatFeed {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/***************************          Footer          ***************************/
+.footer {
+   height: 200px;
+   background-color: black;
+   text-align: center;
+   line-height: 200px;
+}
+
+.footer a, h5{
+   color: white;
+   text-decoration: none;
+   text-align: center;
+}
+
+.footer a:hover {
+   color: #49C6E3;
+}
+
+.footer i {
+   margin-right: 15px;
+}

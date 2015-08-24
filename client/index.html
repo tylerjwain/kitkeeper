@@ -1,0 +1,676 @@
+<html ng-app='myApp'>
+<head>
+	<title>Welcome to KitKeeper</title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Google Font: Source Sans Pro -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400' rel='stylesheet' type='text/css'>
+
+	<!-- Local CSS Stylesheet -->
+	<link href="stylesheets/style.css" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js'/></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- Local Animate.CSS Stylesheet -->
+  	<link rel="stylesheet" type="text/css" href="stylesheets/animate.css" />
+
+	<!-- Waypoints -->
+	<script src="javascript/waypoints.min.js"></script>
+
+	<!-- Local jQuery -->
+	<script src="./javascript/script.js"></script>
+
+	<!-- Factory -->
+	<script src="./javascript/factories/factory.js"></script>
+
+	<!-- Controller -->
+	<script src="./javascript/controllers/controller.js"></script>
+
+</head>
+<body>
+	<!-- Jumbotron -->
+	<div class="jumbotron">
+		<div class="banner">
+			<h2>KitKeeper</h2>
+		</div>
+	</div>
+
+<div class="container-fluid">
+
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>                        
+	      </button>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	    	<ul class="nav navbar-nav navbar-left">
+	    		<li><a href="#">KIT<span>KEEPER</span></a></li>
+	    	</ul>
+
+	      	<ul class="nav navbar-nav navbar-right">
+		      	<li><a href="#howWorks" class="animateNav">HOW IT WORKS</a></li>
+		        <li><a href="#create" class="animateNav">CREATE A KIT</a></li>
+		        <li><a href="#create" class="animateNav">EXPLORE KITS</a></li>
+				<li><a href="#" class="animateNav">DISCOVER RACES</a></li>
+	      </ul>
+	    </div>
+	</nav>
+
+	<!-- How It Works: Intro -->
+	<div class="row">
+		<div class="col-md-12 headerIntro">
+			<h3><span>+</span>HOW IT WORKS</h3>
+			<p>YOU CHOSE TO RACE, WE CHOSE TO HELP</p>
+		</div>
+	</div>
+
+	<!-- How It Works -->
+	<div class="row">
+		<div class="row howBody">
+
+			<div class="col-md-2 step1 col-md-offset-2">
+				<h3>1</h3>
+				<p><span>SELECT</span><br>CREATE OR EXPLORE</p>
+			</div>
+
+			<div class="col-md-2 step2">
+				<h3>2</h3>
+				<p><span>BUILD</span><br>FOR YOUR RACE</p>
+			</div>
+
+			<div class="col-md-2 step3">
+				<h3>3</h3>
+				<p><span>PACK</span><br>WITH A CLEAR MIND</p>
+			</div>
+
+			<div class="col-md-2 step4">
+				<h3>4</h3>
+				<p><span>ARRIVE</span><br>CONFIDENT AND READY</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Create: Parallax -->
+	<div class="row createParallax">
+		<div class="col-md-12 createParallaxBtm">
+		</div>
+	</div>
+
+
+	<!-- Create: Intro -->
+	<div class="row">
+		<div class="col-md-12 createIntro">
+			<h3><span>+</span>CREATE</h3>
+			<p>CREATE A KIT TAILORED TO YOUR TASTES AND PREFERENCES</p>
+		</div>
+	</div>
+
+	<!-- Create -->
+	<div class="row create" ng-controller="itemController">
+		<div class="col-md-10">
+			<div class="tabbable tabs-below">
+				<div class="tab-content">
+					<ul class="nav nav-pills responsive">
+						<li class="active"><a data-toggle="tab" href="#tab1">SWIM</a></li>
+						<li><a data-toggle="tab" href="#tab2">BIKE</a></li>
+						<li><a data-toggle="tab" href="#tab3">RUN</a></li>
+						<li><a data-toggle="tab" href="#tab4">EXTRA</a></li>
+						<li><a data-toggle="tab" href="#tab5">MY LIST</a></li>
+					</ul>
+				</div>
+
+				<div class="tab-content createItems">
+					<!-- CREATE: Swim -->
+					<div id="tab1" class="tab-pane fade active in">
+						<table class="table table-striped table-hover" id="swim">
+							<tbody>
+								<tr>
+									<td><input type="checkbox" value="ANTI-FOG SOLUTION"> ANTI-FOG SOLUTION</td>
+									<td><input type="checkbox" value="BODY GLIDE"> BODY GLIDE</td>
+									<td><input type="checkbox" value="SWIM CAP"> SWIM CAP</td>
+									<td><input type="checkbox" value="SWIM SUIT/SKIN"> SWIM SUIT/SKIN</td>
+									<td><input type="checkbox" value="WETSUIT LUBE"> WETSUIT LUBE</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="EAR PLUGS"> EAR PLUGS</td>
+									<td><input type="checkbox" value="GOGGLES"> GOGGLES</td>
+									<td><input type="checkbox" value="NEOPRENE CAP"> NEOPRENE CAP</td>
+									<td><input type="checkbox" value="WETSUIT"> WETSUIT</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- CREATE: Bike -->
+					<div id="tab2" class="tab-pane fade">
+						<table class="table table-striped table-hover" id="bike">
+							<tbody>
+								<tr>
+									<td><input type="checkbox" value="AERO WATER BOTTLE KIT"> AERO WATER BOTTLE KIT</td>
+									<td><input type="checkbox" value="AERO WATER BOTTLE STRAW/ACCESSORIES"> AERO WATER BOTTLE STRAW/ACCESSORIES</td>
+									<td><input type="checkbox" value="BAR-END PLUGS"> BAR-END PLUGS</td>
+									<td><input type="checkbox" value="RACE WHEELS"> RACE WHEELS</td>
+									<td><input type="checkbox" value="SOCKS"> SOCKS</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="BIKE"> BIKE</td>
+									<td><input type="checkbox" value="CO2 ACCESSORIES"> CO2 ACCESSORIES</td>
+									<td><input type="checkbox" value="CO2 CARTRIDGE/INSTALL KIT"> CO2 CARTRIDGE/INSTALL KIT</td>
+									<td><input type="checkbox" value="SPARE TUBE/TIRE"> SPARE TUBE/TIRE</td>
+									<td><input type="checkbox" value="SUNGLASSES"> SUNGLASSES</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="CYCLING/TRI COMPUTER"> CYCLING/TRI COMPUTER</td>
+									<td><input type="checkbox" value="CYCLING/TRI SHOES"> CYCLING/TRI SHOES</td>
+									<td><input type="checkbox" value="CYCLING/TRI SHORTS"> CYCLING/TRI SHORTS</td>
+									<td><input type="checkbox" value="WATER BOTTLE CAGE"> WATER BOTTLE CAGE</td>
+									<td><input type="checkbox" value="WATER BOTTLES"> WATER BOTTLES</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="FLOOR PUMP"> FLOOR PUMP</td>
+									<td><input type="checkbox" value="FRAME/MINI PUMP"> FRAME/MINI PUMP</td>
+									<td><input type="checkbox" value="HEADBAND"> HEADBAND</td>
+									<td><input type="checkbox" value="VALVE STEM EXTENDERS"> VALVE STEM EXTENDERS</td>
+									<td><input type="checkbox" value="TIRE LEVERS"> TIRE LEVERS</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox"> ROAD/AERO HELMET</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- CREATE: Run -->
+					<div id="tab3" class="tab-pane fade">
+						<table class="table table-striped table-hover" id="run">
+							<tbody>
+								<tr>
+									<td><input type="checkbox" value="FUEL BELT"> FUEL BELT</td>
+									<td><input type="checkbox" value="HAT"> HAT</td>
+									<td><input type="checkbox" value="RUNNING/TRI SHOES"> RUNNING/TRI SHOES</td>
+									<td><input type="checkbox" value="SOCKS"> SOCKS</td>
+									<td><input type="checkbox" value="RUNNING/TRI COMPUTER"> RUNNING/TRI COMPUTER</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="VISOR"> VISOR</td>
+									<td><input type="checkbox" value="SUNGLASSES"> SUNGLASSES</td>
+									<td><input type="checkbox" value="QUICK TIE LACES"> QUICK TIE LACES</td>
+									<td><input type="checkbox" value="RUNNING/TRI WATER BOTTLE"> RUNNING/TRI WATER BOTTLE</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- CREATE: Extra -->
+					<div id="tab4" class="tab-pane fade">
+						<table class="table table-striped table-hover" id="extra">
+							<tbody>
+								<tr>
+									<td><input type="checkbox" value="RACE CONFIRMATION"> RACE CONFIRMATION</td>
+									<td><input type="checkbox" value="RACE NUMBER"> RACE NUMBER</td>
+									<td><input type="checkbox" value="RACE NUMBER BELT"> RACE NUMBER BELT</td>
+									<td><input type="checkbox" value="SALT PILLS"> SALT PILLS</td>
+									<td><input type="checkbox" value="VASELINE"> VASELINE</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="TRI SINGLET"> TRI SINGLET</td>
+									<td><input type="checkbox" value="TRI TOP"> TRI TOP</td>
+									<td><input type="checkbox" value="TRI BOTTOM"> TRI BOTTOM</td>
+									<td><input type="checkbox" value="TIMING CHIP"> TIMING CHIP</td>
+									<td><input type="checkbox" value="ENERGY GELS"> ENERGY GELS</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="FLIP FLOPS/SANDALS"> FLIP FLOPS/SANDALS</td>
+									<td><input type="checkbox" value="POST RACE CLOTHING"> POST RACE CLOTHING</td>
+									<td><input type="checkbox" value="USAT CARD"> USAT CARD</td>
+									<td><input type="checkbox" value="RAIN GEAR"> RAIN GEAR</td>
+									<td><input type="checkbox" value="ENERGY DRINKS"> ENERGY DRINKS</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="SPORTS BRA"> SPORTS BRA</td>
+									<td><input type="checkbox" value="TOWEL"> TOWEL</td>
+									<td><input type="checkbox" value="TRANSITION STATION BUCKET"> TRANSITION STATION BUCKET</td>
+									<td><input type="checkbox" value="WATER"> WATER</td>
+									<td><input type="checkbox" value="ENERGY BARS"> ENERGY BARS</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="ADVIL/IBUPROFEN"> ADVIL/IBUPROFEN</td>
+									<td><input type="checkbox" value="HAND WIPES"> HAND WIPES</td>
+									<td><input type="checkbox" value="SUN BLOCK"> SUN BLOCK</td>
+									<td><input type="checkbox" value="CAMERA"> CAMERA</td>
+									<td><input type="checkbox" value="TRANSITION AREA TOWEL"> TRANSITION AREA TOWEL</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="CELL PHONE"> CELL PHONE</td>
+									<td><input type="checkbox" value="CHAIN LUBE/GREASE"> CHAIN LUBE/GREASE</td>
+									<td><input type="checkbox" value="DIRECTIONS TO RACE"> DIRECTIONS TO RACE</td>
+									<td><input type="checkbox" value="RACE NUMBER PINS"> RACE NUMBER PINS</td>
+									<td><input type="checkbox" value="HEAD LIGHT/FLASH LIGHT"> HEAD LIGHT/FLASH LIGHT</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="HEART RATE MONITOR"> HEART RATE MONITOR</td>
+									<td><input type="checkbox" value="GEAR/TRANSITION BAG"> GEAR/TRANSITION BAG</td>
+									<td><input type="checkbox" value="HEART RATE CHEST STRAP"> HEART RATE CHEST STRAP</td>
+									<td><input type="checkbox" value="RX GLASSES/REC SPECS"> RX GLASSES/REC SPECS</td>
+									<td><input type="checkbox" value="SPECIAL NEEDS/TRANSITION BAGS"> SPECIAL NEEDS/TRANSITION BAGS</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" value="GARBAGE BAG"> GARBAGE BAG</td>	
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<div id="tab5" class="tab-pane fade">
+						<table class="table table-striped table-hover">
+							<div class="myList">
+
+							    <div class="col-md-3 mySwimItem">
+							    	<h3>SWIM</h3>
+							    </div>
+
+							    <div class="col-md-3 myBikeItem">
+							    	<h3>BIKE</h3>
+							    </div>
+
+							    <div class="col-md-3 myRunItem">
+							    	<h3>RUN</h3>
+							    </div>
+
+							    <div class="col-md-3 myExtraItem">
+							    	<h3>EXTRA</h3>
+							    	<div class="firedItems"></div>
+							    	<li ng-repeat="item in items | orderBy: 'name'  track by $index"> {{ item.name | uppercase }}</li>
+							    </div>
+
+							</div>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2 addItem">
+			<div class="row">
+				<h3>ADD TO <span id="spanMyList">MY LIST</span></h3>
+				<input type="text" ng-model="newItem.name">
+				<button ng-click="addItems()" type="button" class="btn btn-danger" id="addButton">ADD</button>
+			</div>
+
+			<div class="row displayCount">
+				<h3><span id="counterValue"></span> COUNT</h3>
+			</div>
+
+			<div class="row shareItem">
+				<h3>SHARE <span>|</span> SAVE</h3>
+				<a href="http://twitter.com/home?status=" title="Twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=" title="Facebook" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+				<a href="" target="_blank"><i class="fa fa-envelope-o fa-lg"></i></a>
+				<a href="" target="_blank"><i class="fa fa-print fa-lg"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Explore: Parallax -->
+	<div class="row exploreParallax">
+		<div class="col-md-12 exploreParallaxBtm">
+		</div>
+	</div>
+
+	<!-- Explore: Intro -->
+	<div class="row">
+		<div class="col-md-12 exploreIntro">
+			<h3><span>+</span>EXPLORE</h3>
+			<p>EXPLORE KITS CURATED FOR EACH DISTANCE</p>
+		</div>
+	</div>
+
+	<!-- Explore -->
+	<div id="explore">
+		<div class="row">
+			<div class="gallery-item">
+				<img src="/images/square_1.jpg" alt="">
+				<div class="imgTitle">
+					<a id="show_sprint" rel="race_1"><h5><span>[</span> SPRINT <span>]</span><hr></h5></a>
+				</div>
+			</div>
+
+			<div class="gallery-item">
+				<img src="/images/square_10BW.jpg" alt="">
+				<div class="imgTitle">
+					<a id="show_olympic" rel="race_2"><h5><span>[</span> OLYMPIC <span>]</span><hr></h5></a>  
+				</div>
+			</div>
+
+			<div class="gallery-item">
+				<img src="/images/square_15BW.jpg" alt="">
+				<div class="imgTitle">
+					<a id="show_halfIron" rel="race_3"><h5><span>[</span> HALF-IRONMAN <span>]</span><hr></h5></a>  
+				</div>
+			</div>
+
+			<div class="gallery-item">
+				<img src="/images/square_7BW.jpg" alt="">
+				<div class="imgTitle">
+					<a id="show_Iron" rel="race_4"><h5><span>[</span> IRONMAN <span>]</span><hr></h5></a>  
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row race_Lists">
+	    <div id="race_1">
+	    	<div class="col-md-12">
+		    	<div class="col-md-3">
+		    		<h3>SPRINT</h3>
+		    		<p>A SPRINT TRIATHLON IS A GREAT FIRST STEP FOR ATHLETES LOOKING TO EXPERIENCE TRIATHLON.</p>
+		    	</div>
+		    	<div class="col-md-6">
+		    		<div class="row">
+						<div class="col-md-3">
+							<h4>SWIM</h4>
+							<p class="amount">7 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>BIKE</h4>
+							<p class="amount">10 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>RUN</h4>
+							<p class="amount">5 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>EXTRA</h4>
+							<p class="amount">6 <span>ITEMS</span></p> 
+						</div>
+					</div>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<div class="race_Share">
+		    			<h3>SHARE <span>|</span> SAVE</h3>
+						<a href="http://twitter.com/home?status=" title="Twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+						<a href="https://www.facebook.com/sharer/sharer.php?u=" title="Facebook" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+						<a href="http://twitter.com/home?status=" title="Email" target="_blank"><i class="fa fa-cloud-download fa-lg"></i></a>
+					</div>
+		    	</div>
+		    </div>
+
+		    <div class="row">
+				<div class="col-md-6 sprintCounter">
+					<div class="col-md-4">
+						<span class="sprint1"></span> METER<br><h3>SWIM</h3>
+					</div>
+					<div class="col-md-4">
+						<span class="sprint2"></span> MILE<br><h3>BIKE</h3>
+					</div>
+					<div class="col-md-4">
+						<span class="sprint3"></span> MILE<br><h3>RUN</h3>
+					</div>
+				</div>
+			    <div class="col-md-6 triathlons1">
+			    	<h3>POPULAR SPRINT DISTANCES RACES</h3>
+					<a href="" title="ITU"><img src="/images/icon/itu.png" alt="#" class="triIcon"></a>
+					<a href="" title="MTS"><img src="/images/icon/mts.png" alt="#" class="triIcon"></a>
+					<a href="" title="Sprint"><img src="/images/icon/sprint.png" alt="#" class="triIcon"></a>
+					<a href="" title="IRONKIDS"><img src="/images/icon/ironkids.png" alt="#" class="triIcon"></a>
+					<a href="" title="IRONGIRL"><img src="/images/icon/irongirl.png" alt="#" class="triIcon"></a>
+				</div>
+			</div>
+	    </div>
+
+	    <div id="race_2">
+	    	<div class="col-md-12">
+		    	<div class="col-md-3">
+		    		<h3>OLYMPIC</h3>
+		    		<p>AN SPRINT TRIATHLON BRIDGES THE GAP BETWEEN SHORT AND MIDDLE DISTANCE RACES.</p>
+		    	</div>
+		    	<div class="col-md-6">
+		    		<div class="row">
+						<div class="col-md-3">
+							<h4>SWIM</h4>
+							<p class="amount">10 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>BIKE</h4>
+							<p class="amount">14 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>RUN</h4>
+							<p class="amount">8 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>EXTRA</h4>
+							<p class="amount">9 <span>ITEMS</span></p> 
+						</div>
+					</div>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<div class="race_Share">
+		    			<h3>SHARE <span>|</span> SAVE</h3>
+						<a href="http://twitter.com/home?status=" title="Twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+						<a href="https://www.facebook.com/sharer/sharer.php?u=" title="Facebook" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+						<a href="http://twitter.com/home?status=" title="Email" target="_blank"><i class="fa fa-cloud-download fa-lg"></i></a>
+					</div>
+		    	</div>
+		    </div>
+			
+			<div class="row">
+				<div class="col-md-6 olympicCounter">
+					<div class="col-md-4">
+						<span class="olympic1"></span> METER<br><h3>SWIM</h3>
+					</div>
+					<div class="col-md-4">
+						<span class="olympic2"></span> MILE<br><h3>BIKE</h3>
+					</div>
+					<div class="col-md-4">
+						<span class="olympic3"></span> MILE<br><h3>RUN</h3>
+					</div>
+				</div>
+			    <div class="col-md-6 triathlons2">
+			    	<h3>POPULAR OLYMPIC DISTANCES RACES</h3>
+			    	<a href="" title="USAT"><img src="/images/icon/usat.png" alt="#" class="triIcon"></a>
+			    	<a href="" title="ITU"><img src="/images/icon/itu.png" alt="#" class="triIcon"></a>
+					<a href="" title="MTS"><img src="/images/icon/mts.png" alt="#" class="triIcon"></a>
+					<a href="" title="5150"><img src="/images/icon/5150.png" alt="#" class="triIcon"></a>
+				</div>
+			</div>
+		</div>
+
+
+	    <div id="race_3">
+	    	<div class="col-md-12">
+		    	<div class="col-md-3">
+		    		<h3>HALF-IRONMAN</h3>
+		    		<p>A HALF-IRONMAN IS A MASSIVE STEP UP FROM OLYMPIC, AND A FAR CRY FROM A FULL IRONMAN. THESE RACES REQUIRE EXTENSIVE TRAINING AND PREPARATION.</p>
+		    	</div>
+		    	<div class="col-md-6">
+		    		<div class="row">
+						<div class="col-md-3">
+							<h4>SWIM</h4>
+							<p class="amount">14 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>BIKE</h4>
+							<p class="amount">18 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>RUN</h4>
+							<p class="amount">10 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>EXTRA</h4>
+							<p class="amount">16 <span>ITEMS</span></p> 
+						</div>
+					</div>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<div class="race_Share">
+		    			<h3>SHARE <span>|</span> SAVE</h3>
+						<a href="http://twitter.com/home?status=" title="Twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+						<a href="https://www.facebook.com/sharer/sharer.php?u=" title="Facebook" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+						<a href="http://twitter.com/home?status=" title="Email" target="_blank"><i class="fa fa-cloud-download fa-lg"></i></a>
+					</div>
+		    	</div>
+		    </div>
+		    <div class="row">
+				<div class="col-md-6 halfCounter">
+					<div class="col-md-4">
+						<span class="half1"></span> METER<br><h3>SWIM</h3>
+					</div>
+					<div class="col-md-4">
+						<span class="half2"></span> MILE<br><h3>BIKE</h3>
+					</div>
+					<div class="col-md-4">
+						<span class="half3"></span> MILE<br><h3>RUN</h3>
+					</div>
+				</div>
+			    <div class="col-md-6 triathlons3">
+			    	<h3>POPULAR HALF-IRONMAN DISTANCES RACES</h3>
+			    	<a href="" title="USAT"><img src="/images/icon/usat.png" alt="#" class="triIcon"></a>
+					<a href="" title="WildWolf"><img src="/images/icon/wildwolf.png" alt="#" class="triIcon"></a>
+					<a href="" title="Skoda"><img src="/images/icon/skoda.png" alt="#" class="triIcon"></a>
+					<a href="" title="MTS"><img src="/images/icon/mts.png" alt="#" class="triIcon"></a>
+					<a href="" title="HyVee"><img src="/images/icon/hyvee.png" alt="#" class="triIcon"></a>
+					<a href="" title="HALF-IRONMAN"><img src="/images/icon/half.png" alt="#" class="triIcon"></a>
+				</div>
+			</div>
+	    </div>
+	    <div id="race_4">
+	    	<div class="col-md-12">
+		    	<div class="col-md-3">
+		    		<h3>IRONMAN</h3>
+		    		<p>THE IRONMAN. THE LONGEST AND MOST DIFFICULT LONG-COURSE RACE. TO BE SUCCESSFUL AT THIS DISTANCE REQUIRES A COMPLETE DEDICATION TO NOT ONLY THE RACE, BUT TO TRAINING, RESEARCH, AND NUTRITION.</p>
+		    	</div>
+		    	<div class="col-md-6">
+		    		<div class="row">
+						<div class="col-md-3">
+							<h4>SWIM</h4>
+							<p class="amount">15 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>BIKE</h4>
+							<p class="amount">22 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>RUN</h4>
+							<p class="amount">12 <span>ITEMS</span></p> 
+						</div>
+						<div class="col-md-3">
+							<h4>EXTRA</h4>
+							<p class="amount">20 <span>ITEMS</span></p> 
+						</div>
+					</div>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<div class="race_Share">
+		    			<h3>SHARE <span>|</span> SAVE</h3>
+						<a href="http://twitter.com/home?status=" title="Twitter" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+						<a href="https://www.facebook.com/sharer/sharer.php?u=" title="Facebook" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+						<a href="http://twitter.com/home?status=" title="Email" target="_blank"><i class="fa fa-cloud-download fa-lg"></i></a>
+					</div>
+		    	</div>
+	    	</div>
+
+	    	<div class="row">
+				<div class="col-md-6 fullCounter">
+					<div class="col-md-4">
+						<span class="full1"></span> METER<br><h3>SWIM</h3>
+					</div>
+					<div class="col-md-4">
+						<span class="full2"></span> MILE<br><h3>BIKE</h3>
+					</div>
+					<div class="col-md-4">
+						<span class="full3"></span> MILE<br><h3>RUN</h3>
+					</div>
+				</div>
+		    	<div class="col-md-6 triathlons4">
+			    	<h3>POPULAR HALF-IRONMAN DISTANCES RACES</h3>
+			    	<a href="" title="USAT"><img src="/images/icon/usat.png" alt="#" class="triIcon"></a>
+					<a href="" title="Skoda"><img src="/images/icon/skoda.png" alt="#" class="triIcon"></a>
+					<a href="" title="WildWolf"><img src="/images/icon/wildwolf.png" alt="#" class="triIcon"></a>
+					<a href="" title="IRONMAN"><img src="/images/icon/full.png" alt="#" class="triIcon"></a>
+				</div>
+			</div>
+	    </div>
+	</div>
+
+	<!-- Discover: Parallax -->
+	<div class="row discoverParallax">
+		<div class="col-md-12 discoverParallaxBtm">
+		</div>
+	</div>
+
+	<!-- Disover: Intro -->
+	<div class="row">
+		<div class="col-md-12 discoverIntro">
+			<h3>CONNECT<span>+</span>RACE</h3>
+			<p>JOIN THE CONVERSATION + DISCOVER YOUR NEXT RACE</p>
+		</div>
+	</div>
+
+	<div class="row discoverTri">
+
+		<div class="row">
+			<div class="col-md-4 topAthletes">
+				<h1>TOP TRIATHLETES 2015</h1>
+				<p>LEADING THE PACK</p>
+			</div>
+
+			<div class="col-md-8 triathlonFeed">
+				<div class="col-md-3">
+					<h3>MIRINDA CARFRAE</h3>
+					<a class="twitter-timeline" width="300" height="400" data-chrome="nofooter noborders" href="https://twitter.com/Mirindacarfrae" data-widget-id="626869427594784768">Tweets by @Mirindacarfrae</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+				<div class="col-md-3">
+					<h3>CHRISSY WELLINGTON</h3>
+					<a class="twitter-timeline" width="300" height="400" data-chrome="nofooter noborders" href="https://twitter.com/chrissiesmiles" data-widget-id="626869831808192512">Tweets by @chrissiesmiles</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+				<div class="col-md-3">
+					<h3>SEBASTIAN KIENLE</h3>
+					<a class="twitter-timeline" width="300" height="400" data-chrome="nofooter noborders" href="https://twitter.com/SebastianKienle" data-widget-id="626760675520458752">Tweets by @SebastianKienle</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+				<div class="col-md-3">
+					<h3>CHRIS LIETO</h3>
+					<a class="twitter-timeline" width="300" height="400" data-chrome="nofooter noborders" href="https://twitter.com/chrislieto" data-widget-id="626868641833680896">Tweets by @chrislieto</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<div class="row footer">
+		<div class="col-md-4">
+			<a href="mailto:tylerjwain@gmail.com" title="Email" target="_blank"><i class="fa fa-envelope-o fa-lg"></i></a>
+			<a href="https://github.com/tylerjwain" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+			<a href="https://twitter.com/tyler_WAIN" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+			<a href="https://instagram.com/tylerjwain/" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+		</div>
+		<div class="col-md-4">
+
+		</div>
+		<div class="col-md-4">
+			<a href="#">TOP <i class="fa fa-arrow-up fa-lg"></i>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- <div class="bigContainer">
+	<div class="container" ng-controller="orderController" >
+		<div class="row">
+			<div class="col-md-12" id="miniMenu1">
+				<a href='#/customers'><h1>ORDERS</h1></a>
+			</div>
+		</div>
+
+		<div class="row">
+
+			NEW ORDER
+			<div class="col-md-6">
+				<h1>ADD NEW ORDER</h1>
+				<form>
+					
+					<label for="customerName" class="marginLeft">CUSTOMER: </label>
+					<select name="customerName" ng-model="newOrder.name">
+						<option ng-repeat='customer in customers'>{{ customer.name | uppercase }}</option>
+					</select><br>
+					<label for="quantity" class="marginLeft" >ORDER NUMBER: </label>
+					<input type="number" ng-model="newOrder.qty"><br>
+					<label for="orderName" class="marginLeft" >ORDER NAME: </label>
+					<select name="orderName" ng-model="newOrder.orderedItem">
+						<option ng-repeat="item in items">{{ item.name | uppercase }}</option>
+					</select>
+					<button ng-click="addOrders()" id="addButton">ADD</button>
+				</form>	
+			</div>
+
+			NEW ITEM
+			<div class="col-md-6">
+				<h1>ADD NEW ITEM</h1>
+				<form>
+					ITEM NAME: <input type="text" ng-model="newItem.name">
+					<button ng-click="addItems()" id="addButton">ADD</button>
+				</form>	
+			</div>
+		</div>
+
+		DISPLAY NEW ORDER AND NEW ITEM
+		<div class="row">
+			<div class="col-md-6">
+				<div class="customerBox">
+					<p ng-repeat="order in orders | orderBy: 'name'  track by $index"> {{ order.name | uppercase }}, {{order.qty}}, {{order.orderedItem}}  <a href="#/orders" id="addNew" ng-click="deleteOrder(order)" type="button">Remove</a></p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="customerBox">
+					<p ng-repeat="item in items | filter:filter_name | orderBy: 'name'  track by $index"> {{ item.name | uppercase }} <a href="#/orders" ng-click="deleteItem(item)" type="button">Remove</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	 -->
